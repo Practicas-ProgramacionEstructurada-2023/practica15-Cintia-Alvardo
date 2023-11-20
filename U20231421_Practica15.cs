@@ -21,8 +21,8 @@ namespace MyApp// Note: actual namespace depends on the project name.
 
             for (int i = 1; i <= cantidadCitas; i++)
             {
-               consultaMedica  consulta = new consultaMedica();
-            
+                consultaMedica consulta = new consultaMedica();
+
                 Console.WriteLine($"Ingrese los datos para la cita {i}: ");
                 Console.Write("Nombre del paciente: ");
                 consulta.NombrePaciente = Console.ReadLine();
@@ -42,7 +42,7 @@ namespace MyApp// Note: actual namespace depends on the project name.
             }
 
             Console.WriteLine("Citas guardadas exitosamente.\n");
-            
+
         }
 
         static void GuardarConsultaEnArchivo(consultaMedica consulta, string nombreArchivo)
@@ -51,10 +51,10 @@ namespace MyApp// Note: actual namespace depends on the project name.
             string nombreCompleto = $"{nombreArchivo}#{consulta.NombrePaciente}.txt";
 
             //Crear el contenido del archivo
-            string contenido = $"Nombre del Paciente: {consulta.NombrePaciente}" +
-                                $"Fecha de Cita: {consulta.FechaCita}" +
-                                $"Razón de Consulta: {consulta.RazonConsulta}" +
-                                $"Costo de Consulta: {consulta.costoConsulta}";
+            string contenido =  $"Nombre del Paciente: {consulta.NombrePaciente}\n" +
+                                $"Fecha de Cita: {consulta.FechaCita}\n" +
+                                $"Razón de Consulta: {consulta.RazonConsulta}\n" +
+                                $"Costo de Consulta: {consulta.costoConsulta}\n";
 
             //Guardar el contenido en el archivo
             File.WriteAllText(nombreCompleto, contenido);

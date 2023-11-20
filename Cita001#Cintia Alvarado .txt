@@ -1,0 +1,4 @@
+Nombre del Paciente: Cintia Alvarado 
+Fecha de Cita: 15/5/2024 10:00:00
+Razón de Consulta: Limpieza
+Costo de Consulta: $30
